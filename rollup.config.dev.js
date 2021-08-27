@@ -6,6 +6,10 @@ import { terser } from 'rollup-plugin-terser'
 import postcss from 'rollup-plugin-postcss'
 import serve from 'rollup-plugin-serve'
 import livereload from 'rollup-plugin-livereload'
+import alias from '@rollup/plugin-alias'
+
+const path = require('path')
+const resolveDir = (dir) => path.join(__dirname, dir)
 
 export default {
   input: 'src/main.js',
@@ -41,6 +45,9 @@ export default {
     terser(), //转译es6+语法 的 解析器，mangler和压缩器工具包       uglify-js只能翻译es5语法
     babel({
       exclude: 'node_modules/*',
+    }),
+    alias({
+      entries: [{ find: '@', replacement: resolveDir('src') }],
     }),
     livereload(),
     serve({

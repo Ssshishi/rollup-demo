@@ -1,6 +1,6 @@
 import _ from 'loadsh'
-import sayHello from './modules/MyModules'
-import Greeter from './modules/Greeter'
+import sayHello from '@/modules/MyModules'
+import Greeter from '@/modules/Greeter'
 import './style.css'
 
 const arr = _.concat([1, 2, 3, 4])
