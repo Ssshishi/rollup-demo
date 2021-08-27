@@ -3,6 +3,9 @@
     "build": "rollup -c"
   },
   "devDependencies": {
-    "rollup": "^2.56.3"
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "rollup": "^2.56.3",
+    "rollup-plugin-babel": "^4.4.0"
   }
 }
