@@ -4,7 +4,7 @@ class Greeter {
     this.greeting = message
   }
   greet() {
-    console.log('hello,ts')
+    console.log('hello,cishy')
   }
 }
 

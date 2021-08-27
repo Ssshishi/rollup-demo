@@ -5,6 +5,7 @@ import typescript from '@rollup/plugin-typescript'
 import { terser } from 'rollup-plugin-terser'
 import postcss from 'rollup-plugin-postcss'
 import serve from 'rollup-plugin-serve'
+import livereload from 'rollup-plugin-livereload'
 
 export default {
   input: 'src/main.js',
@@ -41,6 +42,7 @@ export default {
     babel({
       exclude: 'node_modules/*',
     }),
+    livereload(),
     serve({
       open: true,
       port: 3000,
