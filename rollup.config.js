@@ -2,6 +2,7 @@ import resolve from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
 import babel from 'rollup-plugin-babel'
 import typescript from '@rollup/plugin-typescript'
+import { terser } from 'rollup-plugin-terser'
 
 export default {
   input: 'src/main.js',
@@ -33,6 +34,7 @@ export default {
     resolve(), //rollup-plugin-node-resolve 插件允许我们加载第三方模块
     commonjs(), //@rollup/plugin-commons 插件将它们转换为ES6版本
     typescript(),
+    terser(), //转译es6+语法 的 解析器，mangler和压缩器工具包       uglify-js只能翻译es5语法
     babel({
       exclude: 'node_modules/*',
     }),
