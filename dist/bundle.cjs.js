@@ -4,4 +4,4 @@ const sayHello = (message) => {
   alert(message);
 };
 
-sayHello('hi,Cishy');
+sayHello('hi,ci');
