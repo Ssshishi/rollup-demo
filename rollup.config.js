@@ -1,6 +1,7 @@
 import resolve from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
 import babel from 'rollup-plugin-babel'
+import typescript from '@rollup/plugin-typescript'
 
 export default {
   input: 'src/main.js',
@@ -31,6 +32,7 @@ export default {
   plugins: [
     resolve(), //rollup-plugin-node-resolve 插件允许我们加载第三方模块
     commonjs(), //@rollup/plugin-commons 插件将它们转换为ES6版本
+    typescript(),
     babel({
       exclude: 'node_modules/*',
     }),
